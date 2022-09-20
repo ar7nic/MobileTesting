@@ -9,7 +9,7 @@ public class SendMailTest extends BaseTest{
     private final String TEST_SUBJECT = "Gmail test";
 
     @Test
-    @Order(4)
+//    @Order(4)
     public void sendEmail() throws InterruptedException {
         getGmailPage()
              .tapComposeButton()

@@ -40,7 +40,7 @@ public class SignInPage extends BasePage{
 
     public SignInPage tapAgreeButton() throws InterruptedException {
         waitForElementAndClick(agreeBtn, "Can't find Agree button", DEFAULT_TIMEOUT_SEC);
-        Thread.sleep(5000);
+        Thread.sleep(7000);
         logger.info("Account was added.");
         return this;
     }

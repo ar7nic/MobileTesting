@@ -47,7 +47,7 @@ public class GmailPage extends BasePage {
 
     public GmailPage waitSendingEmail() throws InterruptedException {
         Thread.sleep(6000);
-        waitForElementToDisappear(unsent, "Can't find Unsent message", 50);
+        waitForElementToDisappear(unsent, "Can't find Unsent message", 60);
         return this;
     }
 

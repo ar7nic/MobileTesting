@@ -21,6 +21,9 @@ public class ComposePage extends BasePage{
     @AndroidFindBy(id = "com.google.android.gm:id/send")
     private WebElement sendBtn;
 
+    @AndroidFindBy(id = "android:id/button2")
+    private WebElement dismissBtn;
+
     public GmailPage tapSendEmailBtn() {
         waitForElementAndClick(sendBtn, "Can't find Send button", DEFAULT_TIMEOUT_SEC);
         logger.info("Email was sent");
@@ -34,6 +37,12 @@ public class ComposePage extends BasePage{
     }
 
     public ComposePage enterEmail(String email) {
+
+        try {
+            waitForElementAndClick(dismissBtn, "Cant find dismiss", 5);
+        } catch (Exception e) {
+            logger.error(e);
+        }
         waitForElementAndSendKeys(mailToField, email, "Can't find mail-to field", DEFAULT_TIMEOUT_SEC);
         return this;
     }

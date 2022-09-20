@@ -33,8 +33,9 @@ public class AccountManagePage extends BasePage{
         return false;
     }
 
-    public AccountManagePage tapManageAccountsBtn() {
-        waitForElementAndClick(manageAccountBtn, "Can't find Manage accounts button", DEFAULT_TIMEOUT_SEC);
+    public AccountManagePage tapManageAccountsBtn() throws InterruptedException {
+        waitForElementAndClick(manageAccountBtn, "Can't find Manage accounts button", 50);
+        Thread.sleep(1000);
         return this;
     }
 

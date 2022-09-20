@@ -26,7 +26,7 @@ public class BaseTest {
 
     }
     @BeforeEach
-    public void luaunchApp() throws InterruptedException {
+    public void launchApp() throws InterruptedException {
         new DriverConfig();
         driver = DriverConfig.createDriverInstance();
         Thread.sleep(1000);
@@ -38,7 +38,7 @@ public class BaseTest {
 
     @AfterEach()
     public void close() {
-        driver.terminateApp("com.google.android.gm");
+//        driver.terminateApp("com.google.android.gm");
         driver.terminateApp("com.android.settings");
         driver.terminateApp("com.google.android.gms");
         if (driver != null) {
