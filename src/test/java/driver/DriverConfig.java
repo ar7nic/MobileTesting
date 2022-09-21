@@ -33,5 +33,9 @@ public class DriverConfig {
         return driver;
     }
 
+    public static void closeDriver() {
+        driver.quit();
+        driver = null;
+    }
 
 }
